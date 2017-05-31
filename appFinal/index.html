@@ -1,0 +1,261 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>App Final Jessica Cabanillas Rodriguez</title>
+
+ 	<!--<link rel="stylesheet" href="css/tema_AppFInal1.min.css" />-->
+  <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+  <link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+  <link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+</head> 
+<body> 
+
+<!--Página de Inicio-->
+<div data-role="page" id="inicio">
+  <!-- Ejemplo de clase para color -->
+      <div data-role="header" class="dark-primary-color">
+        <h1>Inicio</h1>
+					<div class="centrado_header">
+            <center>
+              	<a href="#agregarServicio" data-role="button" data-icon="plus" class="light-primary-color">Agregar Servicio</a>
+						<a href="#pag_Acerca" data-role="button" data-icon="plus" class="light-primary-color">Acerca de m&iacute;</a>
+            </center>
+					        
+					</div>
+      </div>
+      
+      <div data-role="content" id="cont_Inicio">	
+         	<div data-role="collapsible-set" data-theme="b" data-content-theme="d" id="mainColl">
+         	</div>
+      </div>
+     	<!--Footer-->
+	 <div data-role="footer" data-position="fixed" data-id="footer" >
+ 	 <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-rel="back" data-role="button" data-icon="arrow-l">Atras</a></li>
+          <li><a href="#info" data-role="button" data-icon="info">Info</a></li>
+          <li><a href="#agregarServicio" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+        </ul>
+     </div>
+  </div>
+</div>
+<!--Agregar Servicios-->
+
+<div data-role="page" id="agregarServicio">
+	<div data-role="header" class="dark-primary-color">
+		<h1>Servicios</h1>
+	</div>
+	<div data-role="content">	
+		  <div class="form" name="frm_AgregarServicio" id="frm_AgregarServicio">
+         <!--Imagen-->
+         <center>
+           
+          <div class="imageContainer">
+              
+              <br>
+            <span>Haz click en una imagen para seleccionarla</span>
+              <br>
+              <br>
+              <br>
+
+            <img src="images/comida.png" alt="Icono servicio"  class="imagen_Servicio">
+            <img src="images/bebidas.png" alt="Icono servicio"  class="imagen_Servicio">
+           <img src="images/pastel.png" alt="Icono servicio"  class="imagen_Servicio"></div>
+      </center> 
+       <!--ID-->
+          <label for="txt_ID">ID:</label>
+          <input type="text" name="txt_ID" id="txt_ID" required>
+      <!--Nombre-->
+          <label for="txt_Nombre">Nombre:</label>
+          <input type="text" name="txt_Nombre" id="txt_Nombre" required>
+      <!--Descripción-->
+          <label for="txt_Descripcion">Descripción:</label>
+          <textarea cols="20" rows="4" name="txt_Descripcion" id="txt_Descripcion" required></textarea>
+      <!--e-mail -->
+          <label for="txt_Mail">Correo:</label>
+          <input type="email" name="txt_Mail" id="txt_Mail" value="" required>
+      <!--Domicilio -->
+          <label for="txt_Domicilio">Domicilio:</label>
+          <textarea cols="40" rows="8" name="txt_Domicilio" id="txt_Domicilio"></textarea>
+	  <!--Categoria-->
+	   	  <label for="txt_Categoria">Categoría:</label>
+          <input type="text" name="txt_Categoria" id="txt_Categoria" value="" required>
+	  <!--Nota -->
+          <label for="txt_Nota">Nota:</label>
+          <textarea cols="40" rows="8" name="txt_Nota" id="txt_Nota" required ></textarea>
+ 
+		<!--Guardar-->
+				 <input type="button" value="Agregar" id="btn_AgregarServicio" name="btn_AgregarServicio"/ >
+
+      </div>	
+	</div>
+	<!--Footer-->
+	 <div data-role="footer" data-position="fixed" data-id="footer">
+ 	 <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-rel="back" data-role="button" data-icon="arrow-l">Atras</a></li>
+		      <li><a href="#inicio" data-role="button" data-icon="home">Inicio</a></li>
+          <li><a href="#info" data-role="button" data-icon="info">Info</a></li>
+          <li><a href="#infoServicio" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+        </ul>
+     </div>
+  </div>
+</div>
+
+<!--Información del Servicio-->
+
+<div data-role="page" id="infoServicio">
+	<div data-role="header" class="dark-primary-color">
+		<h1>Información del servicio</h1>
+	</div>
+	<div data-role="content">
+	  <div id="contenedor_Servicio">
+    </div>
+
+
+			
+	</div>
+	<!--Footer-->
+	 <div data-role="footer" data-position="fixed" data-id="footer">
+ 	 <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-rel="back" data-role="button" data-icon="arrow-l">Atras</a></li>
+		  <li><a href="#inicio" data-role="button" data-icon="home">Inicio</a></li>
+          <li><a href="#info" data-role="button" data-icon="info">Info</a></li>
+          <li><a href="#EditarServicio" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+        </ul>
+     </div>
+  </div>
+</div>
+
+<div data-role="page" id="EditarServicio">
+	<div data-role="header" class="dark-primary-color">
+		<h1>Editar Servicio</h1>
+	</div>
+	<div data-role="content" id="cont_EditarServicio">	
+    <div class="form" name="frm_EditarServicio" id="frm_EditarServicio">
+      <!--Imagen-->
+         <center>
+           
+          <div class="imageContainer">
+          
+              <img src="images/comida.png" alt="Icono servicio"  class="imagen_Servicio">
+            <img src="images/bebidas.png" alt="Icono servicio"  class="imagen_Servicio">
+           <img src="images/pastel.png" alt="Icono servicio"  class="imagen_Servicio"></div>
+          </div>
+      </center> 
+       <!--ID-->
+          <label for="txt_EditarID">ID:</label>
+          <input type="text" name="txt_EditarID" id="txt_EditarID" required readonly>
+      <!--Nombre-->
+          <label for="txt_EditarNombre">Nombre:</label>
+          <input type="text" name="txt_EditarNombre" id="txt_EditarNombre" required>
+      <!--Descripción-->
+          <label for="txt_EditarDescripcion">Descripción:</label>
+          <textarea cols="20" rows="4" name="txt_EditarDescripcion" id="txt_EditarDescripcion" required></textarea>
+      <!--e-mail -->
+          <label for="txt_EditarMail">Correo:</label>
+          <input type="email" name="txt_EditarMail" id="txt_EditarMail" value="" required>
+      <!--Domicilio -->
+          <label for="txt_EditarDomicilio">Domicilio:</label>
+          <textarea cols="40" rows="8" name="txt_EditarDomicilio" id="txt_EditarDomicilio"></textarea>
+	  <!--Categoria-->
+	   	  <label for="txt_EditarCategoria">Categoría:</label>
+          <input type="text" name="txt_EditarCategoria" id="txt_EditarCategoria" value="" required>
+	  <!--Nota -->
+          <label for="txt_EditarNota">Nota:</label>
+          <textarea cols="40" rows="8" name="txt_EditarNota" id="txt_EditarNota" required ></textarea>
+ 
+		<!--Guardar-->
+				 <input type="button" value="Editar" id="btn_EditarServicio" name="btn_EditarServicio"/ >
+         <input type="button" value="Eliminar" class="delete" id="btn_EliminarServicio" name="btn_EliminarServicio"/ >
+
+  </div>	
+	
+				
+	</div>
+	<!--Footer-->
+	 <div data-role="footer" data-position="fixed" data-id="footer">
+ 	 <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-rel="back" data-role="button" data-icon="arrow-l">Atras</a></li>
+		  <li><a href="#inicio" data-role="button" data-icon="home">Inicio</a></li>
+          <li><a href="#info" data-role="button" data-icon="info">Info</a></li>
+          <li><a href="#JQueryMobile" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+        </ul>
+     </div>
+  </div>
+</div>
+<!--Acerca de Mí-->
+<div data-role="page" id="pag_Acerca">
+  <div data-role="header" class="dark-primary-color">
+    <h1>Acerca de M&iacute;</h1>
+  </div>
+  <div data-role="content">
+      <!--Galería de Imagenes-->
+      <div class="gallery">
+        <center>
+          <div class="img-w">
+            <img src="images/paypal.jpeg" alt="" />
+          </div>
+        </center>
+      </div>
+
+      <div class="info">
+      <center>
+      <img src="images/1.jpg" width="250" height="300" alt="1">
+      </center>
+<p><strong>Alumno: </strong> Jessica Cabanillas Rodriguez</p>
+        <p><strong>Carrera: </strong>Licenciatura en Ingenier&iacute;a en Sistemas de la Informaci&oacute;n </p>
+        <p><strong>Donaci&oacute;n</strong> </p>
+     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="SLCF7P38GS9P4">
+<input type="image" src="https://www.sandbox.paypal.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+      </div>
+
+  </div>
+  <!--Footer-->
+	 <div data-role="footer" class="dark-primary-color" data-position="fixed" data-id="footer">
+ 	 <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-rel="back" data-role="button" data-icon="arrow-l">Atras</a></li>
+		      <li><a href="#inicio" data-role="button" data-icon="home">Inicio</a></li>
+          <li><a href="#info" data-role="button" data-icon="info">Info</a></li>
+          <li><a href="#JQueryMobile" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+        </ul>
+     </div>
+  </div>
+</div>
+<!--Info Dialog-->
+<div data-role="dialog" id="info">
+  <div data-role="header">
+      <h1>Info</h1>
+    </div>
+    <div data-role="content">
+		<p>Aplicación creada con JQuery Mobile y PhoneGap, mediante Dreamweaver CS6. </p>
+		<p>Jessica Cabanillas Rodriguez/ 12 de Mayo de 2017</p>
+		<a href="#inicio" data-role="button" >Cerrar</a>
+    </div>
+</div>
+
+
+
+
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+<script src="js/functions/main.js"></script>
+
+
+
+</body>
+</html>
